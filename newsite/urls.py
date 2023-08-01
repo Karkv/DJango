@@ -5,11 +5,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('home/', views.home),
-    path('s',views.sub),
-    path('s1',views.cal),
-    path('s2',views.newcal),
-    path('s3',views.list),
-    # path('s4',views.result),
-    path('s5',views.res),
+    path('result', views.resultview),
 ]
