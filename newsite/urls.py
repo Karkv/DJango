@@ -10,4 +10,6 @@ urlpatterns = [
     path('s1',views.cal),
     path('s2',views.newcal),
     path('s3',views.list),
+    # path('s4',views.result),
+    path('s5',views.res),
 ]

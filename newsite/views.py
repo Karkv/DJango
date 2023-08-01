@@ -3,6 +3,7 @@ from django.shortcuts import HttpResponse, render
 
 
 def index(request):
+    
     return HttpResponse("Hello")
 
 
@@ -74,6 +75,32 @@ def newcal(request):
             result=a/b
     return render(request,"newcal.html",{"a":a,"b":b,"result":result})
 
+
+# def result(request):
+#     r=int()
+#     if request.GET:
+
+        
+#         s_details={1:"Ram",2:"Shyam",3:"Hari",4:"Om"}
+#         result={1:"pass",2:"fail",3:"pass"}
+
+#         cmd=int(request.GET["rollno"])
+        
+#         for key in s_details:
+#             if key==result.keys():
+                
+        
+#         #r=key
+
+
+    
+#     return render(request,"result.html")#,{"r":r,"rollno":rollno})#,{"n":n,"r":r,"rollno":rollno,"name":name})
+
+   
+    # return HttpResponse("Hello")
+
+
+
 def list(request):
     a=0
     b=0
@@ -83,13 +110,20 @@ def list(request):
         a=int(request.GET["n1"])
         b=int(request.GET["n2"])
 
-        cmd=request.GET("operation")
+        cmd=request.GET["operation"]
 
         if cmd=="add":
             result=a+b
 
         elif cmd=="sub":
-            result=a+b
+            result=a-b
 
         
     return render(request,"listcalculator.html",{"a":a,"b":b,"result":result})
+
+
+def res(request):
+    if request.GET():
+        print("Posted")
+    
+    return render(request,"sudentre.html")
