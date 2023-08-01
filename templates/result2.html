@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" >
+        
+        {% csrf_token %}
+        <h1>Student result</h1>
+        <h4>Enter the Roll Number:</h4>
+        <input type="number" name="rollno" value="{{rollno}}" >
+        <button type="submit">get</button>
+        <h2>Result </h2>
+       <table>
+        <tr>
+            <th>Name:</th>
+            <th>Age:</th>
+            <th>English:</th>
+            <th>Hindi:</th>
+            <th>Science:</th>
+            <th>Math:</th>    
+
+
+        </tr>
+        <tr>
+            <td>{{result.name}}</td>
+            <td>{{result.Age}}</td>
+            <td>{{result.subject.English}}</td>
+            <td>{{result.subject.Hindi}}</td>
+            <td>{{result.subject.Science}}</td>
+            <td>{{result.subject.Math}}</td>
+        </tr>
+       </table>
+
+       
+    </form>
+</body>
+</html>

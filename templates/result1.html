@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultdemo</title>
+</head>
+<body>
+    
+    <form method="post">
+{% csrf_token %}
+<h1>Student result</h1>
+
+<input type="number" value="{{rollno}}" name="rollno">
+
+<button type="submit"> get result</button>
+<h2>Result:</h2>
+    <h2>Name:{{result.name}} <br>
+    Physics:{{result.physics}} <br>
+    Chemistry:{{result.chemistry}} <br>
+    Math:{{result.maths}}
+</h2>
+
+
+
+
+
+
+    </form>
+</body>
+</html>
